@@ -36,7 +36,8 @@ class ComplainController extends Controller
         $complain->date_of_fir=$req->input('date_of_fir');
         $complain->crime_status=$req->input('crime_status');
         $complain->user_id=$req->input('user_id');
-        $complain->file_path=$req->file('file')->store('products');
+        $complain->file_path=$req->input('file_path');
+        // $complain->file_path=$req->file('file')->store('products');
         $complain->save();
         return $complain;
         // return $req->input();
